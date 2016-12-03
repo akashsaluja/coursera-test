@@ -18,6 +18,10 @@
             }
         }
 
+        $scope.clear = function () {
+            $scope.messageToUser = '';
+        }
+
 
     }
 
