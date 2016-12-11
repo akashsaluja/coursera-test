@@ -41,7 +41,7 @@
             console.log(index);
             console.log('Removing', index);
             controller.found.splice(index, 1);
-            foundSize--;
+            controller.foundSize--;
         }
     }
 
