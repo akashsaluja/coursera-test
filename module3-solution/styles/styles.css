@@ -9,6 +9,11 @@ input[type="text"] {
   float: left;
   margin-left: 10px;
 }
+
+.item-button {
+  margin-left: 0px;
+}
+
 .loader {
   display: none;
   margin-left: 5px;
@@ -49,4 +54,14 @@ input[type="text"] {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+.message{
+  display:  none;
+  margin-top: 50px;
+  margin-left: 0px;
+}
+
+.margin{
+  margin-top: 50px;
 }

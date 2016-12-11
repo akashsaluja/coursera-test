@@ -1,0 +1,31 @@
+<!--{{name}}-->
+<!--<h2> {{foundSize}}</h2>-->
+
+<!--<ol class="margin">
+    <li ng-repeat="food in foundItems">{{food.name}}, {{food.short_name}}, {{food.description}}
+        <button ng-click = "removeItem({index: $index});" class = "item-button">Don't want this one!</button>
+    </li>
+</ol>-->
+
+<div class="table-responsive margin" ng-if="foundSize > 0">
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Short Name</th>
+            <th> Description </th>
+            <th> Button </th>
+        </tr>
+        <tr ng-repeat = "food in foundItems">
+            <td> {{food.name}} </td>
+            <td> {{food.short_name}} </td>
+            <td> {{food.description}} </td>
+            <td> <button ng-click = "removeItem({index: $index});" class = "item-button">Don't want this one!</button> </td>
+        </tr>
+    </table>
+</div>
+
+<div ng-if="foundSize === 0" id = "message" class="message alert alert-warning" >
+    <strong>Nothing Found!</strong> 
+</div>
+
+    
