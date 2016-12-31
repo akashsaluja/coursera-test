@@ -1,0 +1,8 @@
+<h3>Categories of food item served here</h3>
+<ol>
+  <li ng-repeat="category in $ctrl.categoryList">
+      <a ui-sref = "items({category: category.short_name})">
+          {{category.name}}
+          </a>
+  </li>
+</ol>
