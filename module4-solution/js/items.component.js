@@ -2,7 +2,7 @@
     angular.module('MenuApp')
     .component('items', {
         
-        templateUrl: '../ui/item_view.html',
+        templateUrl: './ui/item_view.html',
         bindings: {
             categoryItems: '<'
         }

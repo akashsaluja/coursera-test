@@ -3,7 +3,7 @@
     .component('categories', {
         // fill in details
         // controller: CategoryController,
-        templateUrl: '../ui/category_view.html',
+        templateUrl: './ui/category_view.html',
         bindings: {
             categoryList: '<'
         }
