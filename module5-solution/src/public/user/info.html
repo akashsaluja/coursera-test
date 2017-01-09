@@ -1,0 +1,20 @@
+
+<div class="container">
+    <div ng-if = "infoCtrl.dataPresent === false">
+        <h1> Not Signed Up Yet. <a ui-sref = "public.signup">Sign up Now </a> !.</h1>
+
+    </div>
+
+    <div ng-if = "infoCtrl.dataPresent === true">
+        <h3> First Name is {{infoCtrl.user.first}} </h3> <br>
+        <h3> Last Name is {{infoCtrl.user.last}} </h3> <br>
+        <h3> Email id is {{infoCtrl.user.email}} </h3> <br>
+        <h3> Phone no. is {{infoCtrl.user.phone}} </h3> <br>
+        <h3> Fav Dish is {{infoCtrl.user.dish.title}}({{infoCtrl.user.favItem}}) - {{infoCtrl.user.dish.description}} </h3> <br>
+        <img ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.user.favItem}}.jpg">
+        
+
+
+    </div>
+
+</div>

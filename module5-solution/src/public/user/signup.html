@@ -1,0 +1,94 @@
+<div class="container">
+    <h2>Registration Form </h2> 
+    <form name='regForm' class="form-inline" novalidate  >
+            
+    
+        <div>
+            <label>
+            First Name
+            </label>
+            <input type="text" name="first" placeholder="First Name"  class="form-control"
+                    ng-model="signup.user.first"
+                    required
+                    minlength="4"
+                    ng-maxlength="10"/>{{ signup.user.first }}
+            <span ng-if="regForm.first.$invalid && regForm.first.$touched">
+                Name must contain more than 4 charactres and less than 10
+          </span>
+        </div>
+        <br/>
+
+        <div>
+            <label>
+            Last Name<span >*</span>
+            </label>
+            <input type="text" name="last" placeholder="Last Name" class="form-control" ng-model="signup.user.last"
+                    required
+                    minlength="4"
+                    ng-maxlength="10"/>{{ signup.user.last }}
+
+            <span ng-if="regForm.last.$invalid && regForm.last.$touched">
+                Last name must contain more than 4 charactres and less than 10
+          </span>
+        </div>
+        <br/>
+
+        <div >
+            <label>
+                Email Address<span >*</span>
+            </label>
+            <input type="email" name="email" placeholder="Email Address" class="form-control" ng-model="signup.user.email"
+                    required
+                    /> {{signup.user.email}}
+
+            <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+                Must be a valid email address: handle@domain format
+            </span>
+        </div>
+        
+        <br/>
+        <div >
+            <label>
+                Phone No.<span >*</span>
+            </label>
+            <input type="text" name="phone" placeholder="Phone No." class="form-control" ng-model="signup.user.phone"
+            required
+            pattern="(\d{3})-(\d{3})-(\d{4})"/> {{signup.user.phone}}
+
+            <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+                Must be a valid phone number with pattern xxx-xxx-xxxx
+            </span>
+        </div>
+
+        <br/>
+
+        <div >
+        <label>
+            Fav. dish Menu number<span >*</span>
+        </label>
+        <input type="text" name="dish" placeholder="Enter short name for dish" class="form-control" ng-model="signup.user.favItem"
+            required/>
+            
+        <span ng-if="signup.success === false">
+                No such menu number exists
+            </span>
+        </div>
+
+
+        <button
+          ng-disabled="regForm.$invalid"
+          ng-click="signup.submit()">Submit</button>
+        
+
+            
+    </form>
+
+    <span ng-if="signup.success === true">
+                Your information has been saved
+            </span>
+        </div>
+
+
+
+</div>
+
